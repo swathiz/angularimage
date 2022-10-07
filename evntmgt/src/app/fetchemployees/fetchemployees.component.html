@@ -1,0 +1,26 @@
+<div class="fetchemployees">
+  <h1 class="mt-5 ml-2" style="color: thistle">Employees Details</h1>
+
+  <!-- <div class="row ml-5">
+    <button class="btn btn-info btn-sm">Fetch Employees</button>
+  </div> -->
+  <div class="row m-3">
+    <div class="col-6">
+      <p *ngIf="fetchedPosts.length < 1">No Posts Available !!</p>
+      <ul class="list-group" *ngIf="fetchedPosts.length >= 1">
+        <li class="list-group-item" *ngFor="let post of fetchedPosts">
+          <p>{{ post.firstname }}</p>
+          <p>{{ post.lastname }}</p>
+          <p>{{ post.email }}</p>
+          <button class="btn btn-sm btn-danger" (click)="onDeletePost(post.id)">
+            Delete
+          </button>
+          &nbsp;
+          <button class="btn btn-sm btn-info" (click)="gotoEditpage()">
+            Edit
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

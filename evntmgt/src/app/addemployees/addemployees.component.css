@@ -1,0 +1,13 @@
+.addemployees{
+    min-height:100vh; 
+        overflow: hidden;
+        background-image: linear-gradient(to bottom right, #3366cc,#d77490);
+        background-size:cover; 
+        width: 100%;  
+        background-size:cover; 
+    }
+
+    .buttn_center{
+        margin-left: 17vw;
+        
+    }

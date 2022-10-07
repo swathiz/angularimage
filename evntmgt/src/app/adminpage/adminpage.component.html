@@ -1,0 +1,93 @@
+<!-- <div class="container m-2 justify-center" style="width: 400px">
+  <form #f="ngForm">
+    <div class="row m-3">
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input
+          type="text"
+          id="firstname"
+          class="form-control"
+          name="firstname"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+    <div class="row m-3">
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input
+          type="text"
+          id="lastname"
+          class="form-control"
+          name="lastname"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+    <div class="row m-3">
+      <div class="form-group">
+        <label for="email">email</label>
+        <input
+          type="text"
+          id="email"
+          class="form-control"
+          name="email"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row m-3">
+      <div class="col">
+        <button
+          class="btn btn-primary btn-sm"
+          [disabled]="!f.valid"
+          (click)="onCreatePost(f.value, f)"
+        >
+          Add Employee
+        </button>
+      </div>
+      <div class="col">
+        <button class="btn btn-info btn-sm" (click)="onFetchPosts()">
+          Fetch Employees
+        </button>
+      </div>
+    </div>
+  </form>
+  <div class="row m-3">
+    <div class="col">
+      <p *ngIf="fetchedPosts.length < 1">No Posts Available !!</p>
+      <ul class="list-group" *ngIf="fetchedPosts.length >= 1">
+        <li class="list-group-item" *ngFor="let post of fetchedPosts">
+          <p>{{ post.firstname }}</p>
+          <p>{{ post.lastname }}</p>
+          <p>{{ post.email }}</p>
+          <button class="btn btn-sm btn-danger" (click)="onDeletePost(post.id)">
+            Delete Employees
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+<div class="adminpage">
+  <h2 class="heading">Celebrations Event Management</h2>
+
+  <h4 class="subheading">Admin Console</h4>
+  <hr />
+  <div class="row justify-content-around" style="margin-top: 15vh">
+    <div>
+      <button class="btn btn-dark" (click)="gotoAddemployees()">
+        Add Employees
+      </button>
+    </div>
+    <div>
+      <button class="btn btn-info" (click)="gotoFetchemployees()">
+        Fetch Employees
+      </button>
+    </div>
+  </div>
+</div>

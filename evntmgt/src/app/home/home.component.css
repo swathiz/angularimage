@@ -1,0 +1,36 @@
+.form-example button.btn-customized {
+	margin-top: 1rem;
+	padding: .75rem 1.5rem; 
+	background: #bf8040;
+	border: 0; 
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	font-weight: 400; color: #fff; 
+    box-shadow: none;
+}
+
+.form-example button.btn-customized:hover, 
+.form-example button.btn-customized:active, 
+.form-example button.btn-customized:focus, 
+.form-example button.btn-customized:active:focus, 
+.form-example button.btn-customized.active:focus,
+.form-example button.btn.btn-primary:not(:disabled):not(.disabled):active,
+.form-example button.btn.btn-primary:not(:disabled):not(.disabled):active:focus {
+	outline: 0; background: #bf8040; border: 0; color: #fff; box-shadow: none;
+}
+
+.buttn_center{
+    margin-left: 21vw;
+}
+
+
+
+.home{
+min-height:100vh; 
+    overflow: hidden;
+    background:url("../../assets/bg_home1.jpg") no-repeat ; 
+    background-size:cover; 
+    width: 100%;
+    
+    background-size:cover; 
+}
