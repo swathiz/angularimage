@@ -17,4 +17,8 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['/updateaadhar']);
   }
 
+  gotoAdminLogin(){
+    this.router.navigate(['/adminsignin']);
+  }
+
 }

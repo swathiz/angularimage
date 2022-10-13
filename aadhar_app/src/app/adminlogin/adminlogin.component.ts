@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 
@@ -10,21 +10,25 @@ import { Router } from '@angular/router';
 })
 export class AdminloginComponent implements OnInit {
 
+ 
   signupForm: FormGroup;
-
-  constructor(private router: Router) { }
+  constructor(private router: Router,private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.signupForm = new FormGroup({
-      username: new FormControl(null, Validators.required),
-      password: new FormControl(null, [Validators.required, Validators.email]),
+    this.signupForm = this.fb.group({
+      username: 'admin',
+      password: '1234',
     });
+   
   }
+
 
   onSubmit() {
     console.log(this.signupForm.value);
-
-    this.router.navigate(['/admindashboard']);
+    if(this.signupForm.value.username=="admin" && this.signupForm.value.password=="1234"){
+      this.router.navigate(['/admindashboard']);
+    }
+ 
   }
 
 }

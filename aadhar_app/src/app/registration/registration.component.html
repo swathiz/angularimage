@@ -1,17 +1,17 @@
 <div>
   <!-- Form -->
 
-  <form class="form-example" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <form class="form-example" #f="ngForm">
     <h1>Registration</h1>
 
     <div class="form-group">
-      <label for="phone_num" class="text-light">MobileNumber:</label>
+      <label for="mobile" class="text-light">MobileNumber:</label>
       <input
         type="text"
         class="form-control phone_num"
-        id="phone_num"
+        id="mobile"
         placeholder="Mobile Number"
-        name="phone_num"
+        name="mobile"
         style="width: 20vw"
       />
     </div>
@@ -27,7 +27,11 @@
       />
     </div>
     <div>
-      <button type="submit" class="btn btn-primary btn-customized">
+      <button
+        type="submit"
+        class="btn btn-primary btn-customized"
+        (click)="addUserData(f.value, f)"
+      >
         Register
       </button>
     </div>

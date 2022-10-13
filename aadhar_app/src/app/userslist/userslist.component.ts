@@ -5,23 +5,19 @@ import { UserData } from './userdata.model';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-admindashboard',
-  templateUrl: './admindashboard.component.html',
-  styleUrls: ['./admindashboard.component.css']
+  selector: 'app-userslist',
+  templateUrl: './userslist.component.html',
+  styleUrls: ['./userslist.component.css']
 })
-export class AdmindashboardComponent implements OnInit {
+export class UserslistComponent implements OnInit {
 
   fetchedPosts: UserData[] = [];
   backendurl="localhost:8080/users/all";
- 
+
   constructor(private router: Router,private http: HttpClient) { }
 
   ngOnInit(): void {
     this.fetchUsers();
-  }
-
-  gotoUsersList(){
-    this.router.navigate(['/userslist']);
   }
 
   fetchUsers() {
@@ -41,5 +37,6 @@ export class AdmindashboardComponent implements OnInit {
         this.fetchedPosts = posts;
       });
   }
+
 
 }

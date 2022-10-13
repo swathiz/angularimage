@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UpdateaadharComponent } from './updateaadhar/updateaadhar.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { UserslistComponent } from './userslist/userslist.component';
 
 const appRoutes: Routes = [
   {path: '', component:SigninComponent},
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
   {path: 'updateaadhar', component:UpdateaadharComponent},
   {path: 'adminsignin', component:AdminloginComponent},
   {path: 'admindashboard', component:AdmindashboardComponent},
+  {path: 'userslist', component:UserslistComponent},
 ];
 
 @NgModule({
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     UpdateaadharComponent,
     AdminloginComponent,
-    AdmindashboardComponent
+    AdmindashboardComponent,
+    UserslistComponent
   ],
   imports: [
     BrowserModule,

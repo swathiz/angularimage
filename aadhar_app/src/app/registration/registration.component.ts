@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { map } from 'rxjs/operators';
+import { UserData } from './userdata.model';
 import { Router } from '@angular/router';
-import { kMaxLength } from 'buffer';
 
 @Component({
   selector: 'app-registration',
@@ -10,20 +12,21 @@ import { kMaxLength } from 'buffer';
 })
 export class RegistrationComponent implements OnInit {
 
-  signupForm: FormGroup;
+ 
+  backendurl = 'http://localhost:8080/users/add';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.signupForm = new FormGroup({
-      phone_num: new FormControl(null, [Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
-      password: new FormControl(null, [Validators.required,]),
-    });
+    
   }
 
-  onSubmit() {
-    console.log(this.signupForm.value);
+ 
 
+  addUserData(userdata:{mobile:string;password:string},form: NgForm){
+    this.http.post(this.backendurl,userdata).subscribe((responseData)=>{
+      console.log(responseData);
+    })
     this.router.navigate(['/']);
   }
 
