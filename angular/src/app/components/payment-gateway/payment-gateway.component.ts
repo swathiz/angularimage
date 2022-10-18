@@ -33,7 +33,7 @@ export class PaymentGatewayComponent implements OnInit {
 
   buyProducts(){
     this.purchaseService.buyProducts(this.buyProdMap).subscribe(data=>{
-      console.log('products added to Purchase');
+      console.log('movies added to Purchase');
     })
     this.router.navigate(['/orderSummary']);
   }

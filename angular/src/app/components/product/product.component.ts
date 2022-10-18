@@ -46,7 +46,7 @@ export class ProductComponent implements OnInit {
     });
     let config = new MatSnackBarConfig();
     config.duration = this.setAutoHide ? this.autoHide : 0;
-    this.snackBar.open('Product added to cart, View cart to Checkout',true ? 'Ok' : undefined, config);
+    this.snackBar.open('movie added to cart, View cart to Checkout',true ? 'Ok' : undefined, config);
   }
 
   Search(){

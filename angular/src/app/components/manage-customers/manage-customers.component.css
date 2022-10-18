@@ -1,9 +1,19 @@
-.logo{
+/* .logo{
     position:relative;
     top: 8px;
     height: 40px;
     width: 52px;
     cursor: pointer;
+} */
+
+.logo{
+    position:relative;
+    top: 2vh;
+    height: 8vh;
+    width: 50vw;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: 'Bungee Spice', cursive;
 }
 .header-title{
     position: relative;
@@ -29,6 +39,7 @@ hr{
     top: 20px;
     font-size: 36px;
     font-weight: bold;
+    color:aliceblue;
 }
 
 .form-control{

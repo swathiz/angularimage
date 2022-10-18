@@ -1,9 +1,11 @@
 .logo{
     position:relative;
-    top: 8px;
-    height: 80px;
+    top: 2vh;
+    height: 8vh;
     width: 105px;
     cursor: pointer;
+    font-size: 2.5rem;
+    font-family: 'Bungee Spice', cursive;
 }
 .header-title{
     position: relative;
@@ -16,6 +18,8 @@
 }
 .btnMain{
     font-size: 20px;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
 }
 .btnMain:hover{
     color: #bf1e2e;
@@ -26,4 +30,8 @@
 }
 th{
     color:#bf1e2e;
+}
+
+.modal_css{
+    font-family: 'Montserrat', sans-serif;
 }

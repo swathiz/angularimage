@@ -54,3 +54,18 @@ p{
 th{
     text-align: center;
 }
+
+.admind{
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo{
+    position:relative;
+    top: 2vh;
+    height: 8vh;
+    width: 50vw;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: 'Bungee Spice', cursive;
+}

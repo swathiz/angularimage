@@ -105,7 +105,7 @@ export class AdminDashboardComponent implements OnInit {
     this.productModelObj.imagepath=this.formValue.value.imagepath;
     this.productService.addProduct(this.productModelObj)
     .subscribe(res=>{
-      alert("Product Added Sucessfully");
+      alert("movie Added Sucessfully");
       let ref=document.getElementById('cancel');
       ref?.click();
       this.formValue.reset();
@@ -160,7 +160,7 @@ export class AdminDashboardComponent implements OnInit {
 
   deleteProduct(prod:any){
     this.productService.deleteProduct(prod.id).subscribe(res=>{
-      alert('Product Deleted');
+      alert('movie Deleted');
       this.getProducts();
     })
   }
