@@ -87,7 +87,7 @@ public class ProductController {
 		product.setDesc(productDetails.getDesc());
 		
 		product.setcustomername(productDetails.getcustomername());
-		product.setmobilenum((int) productDetails.getmobilenum());
+//		product.setmobilenum((int) productDetails.getmobilenum());
 		product.setCategory(productDetails.getCategory());
 		product.setImagepath(productDetails.getImagepath());
 		product.setActualPrice(productDetails.getActualPrice());
