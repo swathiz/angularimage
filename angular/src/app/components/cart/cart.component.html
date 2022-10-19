@@ -10,7 +10,7 @@
               <th>Movie Image</th>
 
               <th>Price</th>
-
+              <th mat-sort-header="quantity">Qunatity</th>
               <th mat-sort-header="price">Total</th>
               <th>Action</th>
             </tr>
@@ -28,7 +28,18 @@
               </td>
 
               <td style="width: 12%">₹{{ item.product.price }}</td>
-
+              <td style="width: 12%">
+                <span
+                  class="quantityControl"
+                  (click)="lessOneCart(item.id, item)"
+                  >-</span
+                ><span class="border quantity">{{ item.quantity }}</span
+                ><span
+                  class="quantityControl"
+                  (click)="addOneCart(item.id, item)"
+                  >+</span
+                >
+              </td>
               <td style="width: 12%">₹{{ item.price }}</td>
               <td>
                 <button
